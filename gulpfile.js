@@ -6,7 +6,6 @@ var gutil = require('gulp-util');
 var stylus = require('gulp-stylus');
 var changed = require('gulp-changed');
 var notify = require("gulp-notify");
-var static = require('node-static');
 var nib = require('nib');
 var express = require('express');
 var imagemin = require('gulp-imagemin');
