@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var path = require('path')
-var clean = require('gulp-clean');
+var del = require('del');
 var watch = require('gulp-watch');
 var gutil = require('gulp-util');
 var stylus = require('gulp-stylus');
@@ -56,9 +56,7 @@ var handleErrors = function() {
 
 // remove the build files
 gulp.task('clean', function () {
-  return gulp.src(config.clean.src, {read: false})
-    .pipe(clean())
-    .pipe(gulp.dest(config.clean.dest));
+    del([dest])
 });
 
 // copy / minify images
